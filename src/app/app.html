@@ -2,6 +2,21 @@
   <section class="home__card">
     <h1 class="home__title">{{ title() }}</h1>
     <p class="home__subtitle">{{ subtitle() }}</p>
+
+    @switch (state()) {
+      @case ('loading') {
+        <p class="home__status home__status--loading">Connexion au backend…</p>
+      }
+      @case ('connected') {
+        <p class="home__status home__status--ok">
+          Backend connecté : {{ health()?.app }}<br />
+          Statut : {{ health()?.status }}
+        </p>
+      }
+      @case ('error') {
+        <p class="home__status home__status--error">Backend indisponible</p>
+      }
+    }
   </section>
 </main>
 

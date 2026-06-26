@@ -29,3 +29,26 @@
   font-size: 1rem;
   color: #5b6470;
 }
+
+.home__status {
+  margin: 1.5rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.home__status--loading {
+  background-color: #eef1f5;
+  color: #5b6470;
+}
+
+.home__status--ok {
+  background-color: #e8f6ee;
+  color: #1f7a44;
+}
+
+.home__status--error {
+  background-color: #fdecec;
+  color: #b3261e;
+}
